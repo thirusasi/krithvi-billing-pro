@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Krithvi Billing</title><link rel=manifest href=/manifest.json><meta name=theme-color content="#1d4ed8"><link rel=icon href=/icon-192.png>
+<style>
+:root{--bg:#f4f5f8;--fg:#1b2130;--cd:#fff;--bd:#d8dce5;--ac:#1d4ed8;--mu:#667085;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#131720;--fg:#e7eaf1;--cd:#1c2230;--bd:#333b4e;--ac:#7aa5ff;--mu:#98a2b6;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#131720;--fg:#e7eaf1;--cd:#1c2230;--bd:#333b4e;--ac:#7aa5ff;--mu:#98a2b6;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1100px;margin:auto;padding:12px}nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+button,input,select,textarea{font:inherit;color:inherit;background:var(--cd);border:1px solid var(--bd);border-radius:6px;padding:6px 9px}
+button{cursor:pointer}.p,.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:10px;padding:12px;margin-bottom:12px}h3{margin:0 0 8px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:8px}
+label{display:block;font-size:12px;color:var(--mu)}label>*{display:block;width:100%;margin-top:2px;box-sizing:border-box}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%}th,td{padding:5px 7px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}.r{text-align:right}
+#ms{position:fixed;bottom:14px;left:14px;background:var(--ac);color:#fff;border-radius:6px;padding:0 10px}
+.sheet{background:#fff;color:#111;min-width:700px;max-width:794px;margin:auto;padding:28px;font-size:12px;border:1px solid #ccc;box-sizing:border-box}
+.sheet .hd{text-align:center;border-bottom:2px solid #1a3a6e;padding-bottom:8px}.sheet h1{margin:0;color:#1a3a6e;font-size:22px}.sheet h2{margin:0;font-size:18px}
+.sheet .tt{display:flex;justify-content:space-between;align-items:center;margin:10px 0}.sheet .two,.sheet .bt{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+.sheet th{background:#1a3a6e;color:#fff}.sheet td,.sheet th{border-bottom:1px solid #ddd}.sheet pre{margin:0;font:inherit;white-space:pre-wrap}.sheet small{display:block;color:#666;font-weight:700}
+.sheet .gt td{font-weight:700;border-top:2px solid #1a3a6e;font-size:14px}.sheet ol{margin:4px 0;padding-left:18px}
+#pr{display:none}@media print{body>*:not(#pr){display:none!important}#pr{display:block}.sheet{border:0;padding:0}@page{margin:12mm}}
+</style></head><body><main><nav id="nv"></nav><div id="v"></div></main><div id="pr"></div><div id="ms"></div>
+<script>
+const $=s=>document.querySelector(s),R=n=>Math.round((n+1e-9)*100)/100,F=n=>R(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2}),
+e=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]),fd=d=>d?d.split('-').reverse().join('.'):'',td=()=>new Date().toISOString().slice(0,10),
+toast=m=>{$('#ms').textContent=m;setTimeout(()=>$('#ms').textContent='',2500)},L=(desc,sub,hsn,qty,rate)=>({desc,sub,hsn,qty,rate,gst:18}),
+TI='Goods once sold will not be taken back.\nWarranty as per manufacturer terms.\nPhysical damage & burnt items not covered under warranty.\nAll disputes subject to Coimbatore jurisdiction.',
+TQ='Prices quoted are inclusive of 18% GST.\nPayment: 100% against delivery.\nQuotation validity: 30 days from date of issue.\nStandard manufacturer warranty applicable.\nFree delivery & setup at regional campus.';
+let D={s:{nm:{c:'KRITHVI COMPULINICS',t:'KRITHVI TRAVELS'},br:{Coimbatore:'Site No 2, Vignesh Nagar, Navavoor, Coimbatore - 641046',Trichy:'Trichy - add address in Settings'},ph:'+91 99444 54922',em:'krithvicompulinics@gmail.com',gs:'33CWLPM4844B1ZM',bk:'Karur Vysya Bank',an:'KRITHVI COMPULINICS',ac:'1195115000011440',ifsc:'KVBL0001195',pi:'INV - ',ni:1026,pq:'KC/QUO/26-27/',nq:2,ti:TI,tq:TQ,stamp:''},cust:[],items:[],docs:[
+{id:'seed1',type:'i',biz:'c',br:'Coimbatore',no:'INV - 1025',date:'2026-10-27',cn:'R. BALAMURUGAN',cph:'+91 94984 16680',ca:'',cg:'',pos:'33',st:'PAID',mode:'UPI / Cash',incl:1,lines:[L('COFE Wireless 5G SIM Router','WiFi 6 High Speed Dual Band Router','851762',1,3100),L('Live Tech Keyboard & Mouse Combo','','847160',1,330)]},
+{id:'seed2',type:'q',biz:'c',br:'Coimbatore',no:'KC/QUO/26-27/01',date:'2026-11-02',cn:'THE DEAN – REGIONAL CAMPUS',cph:'',ca:'ANNA UNIVERSITY REGIONAL CAMPUS\nNAVAVOOR, COIMBATORE - 641 046',cg:'',pos:'33',ref:'Your Ref Lr. No.: F008/AURCC/CMRG250260/2026 Dated 26.10.2026',val:'30 Days',pt:'100% against delivery',incl:0,lines:[L('Seagate 1TB External SSD','Includes USB-A and USB Type-C Conversion Adapter','847170',2,18750),L('Seagate Pen drive 128GB (USB 3.2)','High-Speed Flash Drive','847170',1,3601.69)]}]};
+const LS='krithvi_billing_v1',n0=new Date();let db=null,V='docs',E=null,RK='reg',FQ='',FT='all',RB={H:[],B:[]},RF={f:(n0.getMonth()>2?n0.getFullYear():n0.getFullYear()-1)+'-04-01',t:td(),b:'all'};
+D.docs=[];
+const api=async(m,u,b)=>{const x=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined,credentials:'same-origin'});
+if(x.status==401&&!u.startsWith('/api/login')&&!u.startsWith('/api/setup')){login();throw 0}if(!x.ok)throw new Error((await x.json().catch(()=>({}))).error||'Error '+x.status);return x.json()},
+keep=()=>{},cfg=()=>api('PUT','/api/cfg',{s:D.s,cust:D.cust,items:D.items}).catch(()=>toast('Could not save settings')),putDoc=d=>api('PUT','/api/bills/'+d.id,d).catch(()=>toast('Could not save - check connection')),
+nid=()=>'d'+Date.now().toString(36),nxt=t=>t=='q'?D.s.pq+String(D.s.nq).padStart(2,'0'):D.s.pi+D.s.ni,
+nd=t=>({id:nid(),type:t,biz:'c',br:'Coimbatore',no:nxt(t),date:td(),cn:'',cph:'',ca:'',cg:'',pos:'33',st:'PAID',mode:'UPI / Cash',ref:'',val:'30 Days',pt:'100% against delivery',incl:t=='q'?0:1,lines:[L('','','',1,0)],isNew:1});
+const lt=(d,l)=>{const a=R(l.qty*l.rate),r=+l.gst||0,t=d.incl?R(a/(1+r/100)):a;return{a,t,x:d.incl?R(a-t):R(a*r/100)}};
+function calc(d){const g={},inter=(d.pos||'33')!='33',rows=[];let tx=0,cg=0,sg=0,ig=0;d.lines.forEach(l=>{const r=+l.gst||0;g[r]=(g[r]||0)+R(l.qty*l.rate)});
+for(const r in g){const a=R(g[r]),t=d.incl?R(a/(1+r/100)):a,x=d.incl?R(a-t):R(a*r/100),c=inter?0:R(x/2);rows.push({r:+r,t,x,c,s:inter?0:R(x-c),i:inter?x:0});tx+=t}
+rows.forEach(w=>{cg+=w.c;sg+=w.s;ig+=w.i});const raw=tx+cg+sg+ig,tot=Math.round(raw);return{rows,tx:R(tx),cg:R(cg),sg:R(sg),ig:R(ig),ro:R(tot-raw),tot}}
+function words(n){const a='One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split(' '),b='_ _ Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split(' '),
+t=x=>x<20?a[x-1]:b[x/10|0]+(x%10?'-'+a[x%10-1]:''),h=x=>(x>99?a[(x/100|0)-1]+' Hundred'+(x%100?' ':''):'')+(x%100?t(x%100):''),o=[];n=Math.round(n);
+[[1e7,'Crore'],[1e5,'Lakh'],[1e3,'Thousand']].forEach(([v,w])=>{if(n>=v){o.push(h(n/v|0)+' '+w);n%=v}});if(n)o.push(h(n));return'Rupees '+(o.join(' ')||'Zero')+' Only'}
+function sheet(d){const s=D.s,c=calc(d),q=d.type=='q',nm=s.nm[d.biz]||s.nm.c,inter=(d.pos||'33')!='33',t=(a,b,k='')=>`<tr class="${k}"><td>${a}<td class=r>${b}`;
+let T=t(q?'Subtotal (Excl. Tax)':'Taxable Value','₹'+F(c.tx));
+c.rows.forEach(w=>T+=inter?t(`IGST @ ${w.r.toFixed(2)}%`,'₹'+F(w.i)):t(`CGST @ ${(w.r/2).toFixed(2)}%`,'₹'+F(w.c))+t(`SGST @ ${(w.r/2).toFixed(2)}%`,'₹'+F(w.s)));
+if(c.ro)T+=t('Round Off','₹'+F(c.ro));T+=t(q?'Total Amount':d.st=='PAID'?'Total Paid':'Total Due','₹'+F(c.tot),'gt');
+return`<div class=sheet><div class=hd><h1>${e(nm)}</h1><div>${e(s.br[d.br]||'')}</div><div>Phone: ${e(s.ph)} | Email: ${e(s.em)}</div><b>GSTIN: ${e(s.gs)}</b></div>
+<div class=tt><h2>${q?'QUOTATION':'TAX INVOICE'}</h2><b># ${e(d.no)}</b></div>${q&&d.ref?`<p>Enquiry Ref: ${e(d.ref)}</p>`:''}
+<div class=two><div><small>${q?'QUOTATION ADDRESS TO':'BILLED TO'}</small><b>${e(d.cn)}</b><pre>${e(d.ca)}</pre>${d.cg?'GSTIN: '+e(d.cg)+'<br>':''}${d.cph?'Phone: '+e(d.cph)+'<br>':''}Place of Supply: ${inter?'State code '+e(d.pos):'Tamil Nadu (33)'}</div>
+<div><small>${q?'QUOTATION':'INVOICE'} OVERVIEW</small>Date: ${fd(d.date)}<br>${q?`Validity: ${e(d.val)}<br>Payment Terms: ${e(d.pt)}`:`Payment Status: <b>${d.st}</b><br>Mode: ${e(d.mode)}`}</div></div>
+<table><tr><th>#<th>ITEM DESCRIPTION<th>HSN/SAC<th class=r>QTY<th class=r>RATE (₹)<th class=r>AMOUNT (₹)${d.lines.map((l,i)=>`<tr><td>${i+1}<td>${e(l.desc)}${l.sub?`<br><small>${e(l.sub)}</small>`:''}<td>${e(l.hsn)}<td class=r>${l.qty}<td class=r>${F(l.rate)}<td class=r>${F(l.qty*l.rate)}`).join('')}</table>
+<p><small>${q?'TOTAL AMOUNT':'TOTAL PAID AMOUNT'} IN WORDS</small>${words(c.tot)}</p>
+<div class=bt><div><small>BANK ${q?'ACCOUNT':'PAYMENT'} DETAILS</small>A/C Name: ${e(s.an)}<br>Bank: ${e(s.bk)}<br>A/C No: ${e(s.ac)}<br>IFSC: ${e(s.ifsc)}</div><table class=tot>${T}</table></div>
+<small>${q?'COMMERCIAL ':''}TERMS &amp; CONDITIONS</small><ol>${(q?s.tq:s.ti).split('\n').filter(Boolean).map(x=>`<li>${e(x)}`).join('')}</ol>
+<div style="text-align:right"><b>FOR ${e(nm)}</b><br>${s.stamp?`<img src="${s.stamp}" height=70>`:'<br><br><br>'}<br>Authorized Signatory</div><div style="text-align:center;color:#666;margin-top:8px">${q?'Quotation':'Tax Invoice'} # ${e(d.no)} · ${e(nm)}</div></div>`}
+const pr=d=>{$('#pr').innerHTML=sheet(d);window.print()};
+function go(v){V=v;if(v=='new'&&!E)E=nd('i');const on=v=='new'?(E.type=='q'?'nq':'ni'):v;
+$('#nv').innerHTML=[['docs','Documents'],['ni','+ Tax invoice'],['nq','+ Quotation'],['rep','Reports & GST'],['set','Settings'],['usr','Users']].filter(x=>ME.role=='owner'||!/rep|set|usr/.test(x[0])).map(([k,n])=>`<button data-go=${k} class="${k==on?'on':''}">${n}</button>`).join('')+'<button data-a=lo>Sign out</button>';({docs:list,new:form,rep:reps,set:sets,usr})[v]()}
+const ui=()=>{if(V=='docs'||V=='rep')go(V)};
+function list(){const a=D.docs.filter(d=>(FT=='all'||d.type==FT)&&(d.no+d.cn).toLowerCase().includes(FQ.toLowerCase())).sort((x,y)=>y.date.localeCompare(x.date)||y.no.localeCompare(x.no,'en',{numeric:true}));
+$('#v').innerHTML=`<div class=card><div class=g><label>Search number or customer<input id=fq value="${e(FQ)}"></label><label>Type<select id=ft>${[['all','All'],['i','Tax invoices'],['q','Quotations']].map(([v,n])=>`<option value=${v} ${v==FT?'selected':''}>${n}`).join('')}</select></label></div></div>
+<div class="card sc"><table><tr><th>No<th>Date<th>Customer<th>Business<th class=r>Total<th>Status<th>${a.map(d=>`<tr><td>${e(d.no)}<td>${fd(d.date)}<td>${e(d.cn)}<td>${d.biz=='t'?'Travels':'Compulinics'}, ${e(d.br)}<td class=r>₹${F(calc(d).tot)}<td>${d.type=='q'?'Quote':d.st}<td style="white-space:nowrap"><button data-a=edit data-id=${d.id}>Edit</button> <button data-a=print data-id=${d.id}>Print</button> ${d.type=='q'?`<button data-a=conv data-id=${d.id}>→ Invoice</button> `:''}${ME.role=='owner'?`<button data-a=rm data-id=${d.id}>Delete</button>`:''}`).join('')||'<tr><td colspan=7>No documents yet'}</table></div>`}
+function form(){const d=E,q=d.type=='q',I=(k,l,t='text',x='')=>`<label>${l}<input data-k=${k} type=${t} value="${e(d[k])}" ${x}></label>`,sel=(k,o)=>o.map(([v,n])=>`<option value="${v}" ${d[k]==v?'selected':''}>${n}`).join('');
+$('#v').innerHTML=`<div class=card><h3>${d.isNew?'New':'Edit'} ${q?'quotation':'tax invoice'}</h3><div class=g>
+<label>Business<select data-k=biz>${sel('biz',[['c','Krithvi Compulinics'],['t','Krithvi Travels']])}</select></label><label>Branch<select data-k=br>${sel('br',Object.keys(D.s.br).map(b=>[b,b]))}</select></label>
+${I('no',q?'Quotation no.':'Invoice no.')}${I('date','Date','date')}${I('cn','Customer name','text','list=cl')}${I('cph','Phone')}${I('cg','Customer GSTIN')}${I('pos','Place of supply (state code)')}
+${q?I('val','Validity')+I('pt','Payment terms')+I('ref','Enquiry ref'):`<label>Payment status<select data-k=st>${sel('st',['PAID','UNPAID','PARTIAL'].map(x=>[x,x]))}</select></label>`+I('mode','Payment mode')}</div>
+<label>Customer address<textarea data-k=ca rows=2>${e(d.ca)}</textarea></label><label style="display:flex;gap:6px;align-items:center;margin:8px 0"><input type=checkbox data-k=incl ${d.incl?'checked':''} style="width:auto"> Rates include GST</label>
+<datalist id=cl>${D.cust.map(c=>`<option value="${e(c.cn)}">`).join('')}</datalist><datalist id=il>${D.items.map(c=>`<option value="${e(c.desc)}">`).join('')}</datalist>
+<div class=sc><table><tr><th>Item<th>Details<th>HSN/SAC<th>Qty<th>Rate ₹<th>GST %<th>${d.lines.map((l,i)=>`<tr>${['desc','sub','hsn','qty','rate','gst'].map(k=>`<td><input data-l=${k} data-i=${i} value="${e(l[k])}" ${k=='desc'?'list=il':''} style="min-width:${k=='desc'||k=='sub'?150:60}px">`).join('')}<td><button data-del=${i}>✕</button>`).join('')}</table></div>
+<p><button data-a=add>+ Add item</button> <button class=p data-a=save>Save</button> <button data-a=pe>Print / PDF</button> <button data-a=cx>Cancel</button></p></div><div class=sc id=pv>${sheet(d)}</div>`}
+async function save(){const d=E;if(!d.cn.trim())return toast('Enter customer name');d.lines=d.lines.filter(l=>l.desc.trim());if(!d.lines.length)return toast('Add at least one item');
+if(d.isNew&&d.no==nxt(d.type)){try{const x=await api('POST','/api/seq/'+d.type);D.s.ni=x.ni;D.s.nq=x.nq;d.no=d.type=='q'?D.s.pq+String(x.used).padStart(2,'0'):D.s.pi+x.used}catch{return toast('Could not get a bill number - check connection')}}delete d.isNew;const i=D.docs.findIndex(x=>x.id==d.id);i<0?D.docs.push(d):D.docs[i]=d;
+const c=D.cust.find(c=>c.cn==d.cn),v={cn:d.cn,cph:d.cph,ca:d.ca,cg:d.cg};c?Object.assign(c,v):D.cust.push(v);
+d.lines.forEach(l=>{const v={desc:l.desc,sub:l.sub,hsn:l.hsn,rate:l.rate,gst:l.gst},m=D.items.find(x=>x.desc==l.desc);m?Object.assign(m,v):D.items.push(v)});putDoc(d);cfg();E=null;go('docs');toast('Saved')}
+function reps(){const inv=D.docs.filter(d=>d.type=='i'&&d.date>=RF.f&&d.date<=RF.t&&(RF.b=='all'||d.biz==RF.b)).sort((a,b)=>a.date.localeCompare(b.date)||a.no.localeCompare(b.no,'en',{numeric:true})),C=inv.map(d=>({d,c:calc(d)})),sm=k=>R(C.reduce((a,x)=>a+x.c[k],0));let H,B=[];
+if(RK=='reg'){H=['Date','Invoice','Customer','GSTIN','Place','Taxable','CGST','SGST','IGST','Round off','Total','Status'];B=C.map(({d,c})=>[fd(d.date),d.no,d.cn,d.cg,d.pos,c.tx,c.cg,c.sg,c.ig,c.ro,c.tot,d.st])}
+else if(RK=='b2b'){H=['GSTIN','Customer','Invoice','Date','Place','Rate %','Taxable','CGST','SGST','IGST','Invoice value'];C.filter(x=>x.d.cg).forEach(({d,c})=>c.rows.forEach(w=>B.push([d.cg,d.cn,d.no,fd(d.date),d.pos,w.r,w.t,w.c,w.s,w.i,c.tot])))}
+else if(RK=='b2c'){H=['Place','Rate %','Taxable','CGST','SGST','IGST'];const m={};C.filter(x=>!x.d.cg).forEach(({d,c})=>c.rows.forEach(w=>{const o=m[d.pos+'|'+w.r]||(m[d.pos+'|'+w.r]=[d.pos,w.r,0,0,0,0]);o[2]+=w.t;o[3]+=w.c;o[4]+=w.s;o[5]+=w.i}));B=Object.values(m)}
+else if(RK=='hsn'){H=['HSN/SAC','Description','Qty','Taxable','CGST','SGST','IGST','Total'];const m={};inv.forEach(d=>{const it=(d.pos||'33')!='33';d.lines.forEach(l=>{const z=lt(d,l),o=m[l.hsn]||(m[l.hsn]=[l.hsn,l.desc,0,0,0,0,0,0]);o[2]+=+l.qty;o[3]+=z.t;if(it)o[6]+=z.x;else{o[4]+=z.x/2;o[5]+=z.x/2}o[7]+=z.a})});B=Object.values(m)}
+else if(RK=='due'){H=['Date','Invoice','Customer','Phone','Status','Amount'];B=C.filter(x=>x.d.st!='PAID').map(({d,c})=>[fd(d.date),d.no,d.cn,d.cph,d.st,c.tot])}
+else{H=['Month','Invoices','Taxable','CGST','SGST','IGST','Total'];const m={};C.forEach(({d,c})=>{const k=d.date.slice(0,7),o=m[k]||(m[k]=[k,0,0,0,0,0,0]);o[1]++;o[2]+=c.tx;o[3]+=c.cg;o[4]+=c.sg;o[5]+=c.ig;o[6]+=c.tot});B=Object.values(m)}
+RB={H,B};const cell=(v,h)=>typeof v=='number'?(/Taxable|GST|Total|value|Round|Amount/.test(h)?F(v):v):e(v);
+$('#v').innerHTML=`<div class=card><div class=g><label>From<input type=date data-r=f value="${RF.f}"></label><label>To<input type=date data-r=t value="${RF.t}"></label><label>Business<select data-r=b>${[['all','Both'],['c','Compulinics'],['t','Travels']].map(([v,n])=>`<option value=${v} ${RF.b==v?'selected':''}>${n}`).join('')}</select></label></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap">${[['reg','Sales register'],['b2b','GSTR-1 B2B'],['b2c','GSTR-1 B2C'],['hsn','HSN summary'],['mon','Monthly'],['due','Outstanding']].map(([k,n])=>`<button data-rk=${k} class="${k==RK?'on':''}">${n}</button>`).join('')}</div></div>
+<div class=g>${[['Invoices',inv.length],['Taxable value','₹'+F(sm('tx'))],['CGST','₹'+F(sm('cg'))],['SGST','₹'+F(sm('sg'))],['IGST','₹'+F(sm('ig'))],['Total sales','₹'+F(sm('tot'))]].map(([a,b])=>`<div class=card style="margin:0"><small>${a}</small><b style="font-size:16px">${b}</b></div>`).join('')}</div><br>
+<div class="card sc"><p style="margin:0 0 8px"><button class=p data-a=csv>Download CSV</button> <span style="color:var(--mu)">Only tax invoices in the date range are counted; quotations are excluded.</span></p><table><tr>${H.map(h=>`<th>${h}`).join('')}${B.map(r=>`<tr>${r.map((v,i)=>`<td class="${typeof v=='number'?'r':''}">${cell(v,H[i])}`).join('')}`).join('')||`<tr><td colspan=${H.length}>No data in this range`}</table></div>`}
+function sets(){const s=D.s;$('#v').innerHTML=`<div class=card><h3>Business details (printed on every bill)</h3><div class=g>${[['ph','Phone'],['em','Email'],['gs','GSTIN'],['bk','Bank'],['an','Account name'],['ac','Account no.'],['ifsc','IFSC'],['pi','Invoice prefix'],['ni','Next invoice no.'],['pq','Quotation prefix'],['nq','Next quotation no.']].map(([k,l])=>`<label>${l}<input data-s=${k} value="${e(s[k])}"></label>`).join('')}
+<label>Compulinics name<input data-n=c value="${e(s.nm.c)}"></label><label>Travels name<input data-n=t value="${e(s.nm.t)}"></label>${Object.keys(s.br).map(b=>`<label>${b} address<input data-b="${b}" value="${e(s.br[b])}"></label>`).join('')}</div>
+<label>Invoice terms (one per line)<textarea data-s=ti rows=4>${e(s.ti)}</textarea></label><label>Quotation terms (one per line)<textarea data-s=tq rows=5>${e(s.tq)}</textarea></label>
+<label>Stamp / signature image<input type=file accept="image/*" id=st></label>${s.stamp?`<img src="${s.stamp}" height=50>`:''}</div>
+<div class=card><button data-a=bk>Download backup</button><label style="margin-top:8px">Restore backup file<input type=file accept=".json" id=rs></label></div>`}
+async function csv(){const t='\ufeff'+[RB.H,...RB.B].map(r=>r.map(v=>`"${String(typeof v=='number'?R(v):v??'').replace(/"/g,'""')}"`).join(',')).join('\n'),dl=window.claude&&await claude.use('downloads');
+dl?dl.save({filename:`krithvi-${RK}-${RF.f}-to-${RF.t}.csv`,data:t}).catch(()=>0):toast('Download not available here')}
+async function bk(){const dl=window.claude&&await claude.use('downloads');dl?dl.save({filename:'krithvi-backup-'+td()+'.json',data:JSON.stringify(D)}).catch(()=>0):toast('Download not available here')}
+function stamp(f){const r=new FileReader;r.onload=()=>{const i=new Image;i.onload=()=>{const k=Math.min(1,260/i.width),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);D.s.stamp=c.toDataURL('image/png');cfg();sets()};i.src=r.result};r.readAsDataURL(f)}
+document.addEventListener('click',ev=>{const t=ev.target.closest('button');if(!t)return;const a=t.dataset.a,g=t.dataset.go,id=t.dataset.id,x=D.docs.find(z=>z.id==id);
+if(g){E=g=='ni'?nd('i'):g=='nq'?nd('q'):null;go(g=='ni'||g=='nq'?'new':g)}else if(t.dataset.rk){RK=t.dataset.rk;reps()}
+else if(a=='add'){E.lines.push(L('','','',1,0));form()}else if(t.dataset.del){E.lines.splice(+t.dataset.del,1);E.lines.length||E.lines.push(L('','','',1,0));form()}
+else if(a=='save')save();else if(a=='pe')pr(E);else if(a=='cx'){E=null;go('docs')}else if(a=='edit'){E=structuredClone(x);go('new')}else if(a=='print')pr(x);
+else if(a=='conv'){E=structuredClone(x);Object.assign(E,{type:'i',id:nid(),no:nxt('i'),date:td(),st:'UNPAID',mode:'UPI / Cash',isNew:1});go('new')}
+else if(a=='rm'){if(t.dataset.s!='1'){t.dataset.s=1;t.textContent='Sure?';return}api('DELETE','/api/bills/'+id).then(()=>{D.docs=D.docs.filter(z=>z.id!=id);list()}).catch(()=>toast('Only the owner can delete'))}
+else if(a=='csv')csv();else if(a=='bk')bk();else if(a=='lg')api('POST',LG?'/api/setup':'/api/login',{u:$('#lu').value,p:$('#lp').value}).then(load).catch(x=>toast(x.message||'Sign in failed'));else if(a=='lo')api('POST','/api/logout').finally(()=>location.reload());else if(a=='ua')api('POST','/api/users',{u:$('#nu').value,p:$('#np').value,role:$('#nr').value}).then(usr).catch(x=>toast(x.message));else if(a=='ud')api('DELETE','/api/users/'+id).then(usr)});
+document.addEventListener('input',ev=>{const t=ev.target,k=t.dataset;if(V!='new'||!E)return;if(k.k)E[k.k]=t.type=='checkbox'?+t.checked:t.value;else if(k.l)E.lines[k.i][k.l]=['qty','rate','gst'].includes(k.l)?parseFloat(t.value)||0:t.value;else return;$('#pv').innerHTML=sheet(E)});
+document.addEventListener('change',ev=>{const t=ev.target,k=t.dataset;
+if(k.s){D.s[k.s]=(k.s=='ni'||k.s=='nq')?+t.value||1:t.value;cfg()}else if(k.n){D.s.nm[k.n]=t.value;cfg()}else if(k.b){D.s.br[k.b]=t.value;cfg()}else if(k.r){RF[k.r]=t.value;reps()}
+else if(t.id=='fq'){FQ=t.value;list()}else if(t.id=='ft'){FT=t.value;list()}else if(t.id=='st'&&t.files[0])stamp(t.files[0])
+else if(t.id=='rs'&&t.files[0])t.files[0].text().then(x=>{try{D=JSON.parse(x);keep();cfg();D.docs.forEach(putDoc);toast('Backup restored');go('docs')}catch{toast('Invalid backup file')}})
+else if(V=='new'&&E){if(k.k=='cn'){const c=D.cust.find(c=>c.cn==t.value);if(c){Object.assign(E,c);form()}}if(k.l=='desc'){const m=D.items.find(x=>x.desc==t.value);if(m){Object.assign(E.lines[k.i],m);form()}}}});
+let ME=null,LG=0;
+window.claude={use:async()=>({save:async o=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([o.data]));a.download=o.filename;a.click()}})};
+async function load(){const x=await api('GET','/api/all');ME=x.me;if(x.cfg){D.s=x.cfg.s;D.cust=x.cfg.cust||[];D.items=x.cfg.items||[]}else cfg();D.docs=x.bills;go('docs')}
+function login(setup){LG=setup;ME=null;$('#nv').innerHTML='';$('#v').innerHTML=`<div class=card style="max-width:360px;margin:40px auto"><h3>${setup?'Create owner account':'Sign in to Krithvi Billing'}</h3><label>Username<input id=lu autocomplete=username></label><label>Password<input id=lp type=password autocomplete=current-password></label><p><button class=p data-a=lg>${setup?'Create account':'Sign in'}</button></p></div>`}
+async function usr(){const l=await api('GET','/api/users');$('#v').innerHTML=`<div class=card><h3>Logins</h3><table>${l.map(x=>`<tr><td>${e(x.u)}<td>${x.role}<td>${x.role=='owner'?'':`<button data-a=ud data-id=${x.id}>Remove</button>`}`).join('')}</table></div><div class=card><h3>Add a login</h3><div class=g><label>Username<input id=nu></label><label>Password (8+ characters)<input id=np type=password></label><label>Role<select id=nr><option value=staff>Staff (billing only)<option value=owner>Owner (full access)</select></label></div><button class=p data-a=ua>Add login</button></div>`}
+setInterval(()=>{if(ME&&(V=='docs'||V=='rep'))api('GET','/api/all').then(x=>{D.docs=x.bills;ui()}).catch(()=>0)},30000);
+fetch('/api/state').then(x=>x.json()).then(x=>x.setup?login(1):load()).catch(()=>login());
+if('serviceWorker'in navigator)navigator.serviceWorker.register('/sw.js');
+</script></body></html>
